@@ -10,4 +10,7 @@ public abstract class AbstractReadWrite<T extends EenDataStructuur> implements D
         this.data = data;
     }
 
+    public EenDataStructuur getData() {
+        return data;
+    }
 }

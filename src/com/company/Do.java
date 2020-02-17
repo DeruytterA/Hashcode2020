@@ -1,5 +1,5 @@
 package com.company;
 
-public interface Do<T extends EenDataStructuur> {
-    public T doYourThing();
+public interface Do {
+    public void doYourThing();
 }

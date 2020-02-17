@@ -1,12 +1,13 @@
 package com.company;
 
-public class WriteFile {
+public class WriteFile<T extends EenDataStructuur> extends AbstractReadWrite<T>{
 
-    private EenDataStructuur data;
-    private String filename;
+    public WriteFile(T data, String filename) {
+        super(data, filename);
+    }
 
-    public WriteFile(EenDataStructuur data, String filename) {
-        this.data = data;
-        this.filename = filename;
+    @Override
+    public T doYourThing() {
+        return null;
     }
 }

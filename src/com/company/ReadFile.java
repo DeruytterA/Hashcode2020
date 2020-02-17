@@ -1,13 +1,14 @@
 package com.company;
 
-public class ReadFile {
+public class ReadFile<T extends EenDataStructuur> extends AbstractReadWrite<T>{
 
-    private EenDataStructuur data;
-    private String filename;
+    public ReadFile(T data, String filename) {
+        super(data,filename);
+    }
 
-    public ReadFile(EenDataStructuur data, String filename) {
-        this.data = data;
-        this.filename = filename;
+    @Override
+    public T doYourThing() {
+        return null;
     }
 
     //todo maak nieuwe thread en schrijf shit weg

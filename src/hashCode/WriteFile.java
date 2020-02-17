@@ -7,12 +7,13 @@ import java.io.IOException;
 public class WriteFile<T extends EenDataStructuur> extends AbstractReadWrite<T>{
 
     public WriteFile(T data, String filename) {
-        super(data, filename);
+        super(data, out+filename);
     }
 
     @Override
     public void doYourThing() {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))){
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(pathname))){
             //todo shrijf shit naar data
         } catch (IOException e) {
             e.printStackTrace();

@@ -1,4 +1,4 @@
-package com.company;
+package hashCode;
 
 public interface EenDataStructuur {
     //WE SLAAN HIER SHIT OP

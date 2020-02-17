@@ -1,4 +1,4 @@
-package com.company;
+package hashCode;
 
 public abstract class AbstractReadWrite<T extends EenDataStructuur> implements Do{
 

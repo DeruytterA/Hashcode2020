@@ -14,13 +14,20 @@ public class ReadFile<T extends EenDataStructuur> extends AbstractReadWrite<T>{
     public void doYourThing() {
         String line;
         try (BufferedReader reader = new BufferedReader(new FileReader(pathname))){
-            while((line = reader.readLine()) != null) {
-                //todo do something with the read line;
-            }
+            line = reader.readLine();
         } catch (IOException e) {
             e.printStackTrace();
         }
         return;
+    }
+
+    public int[] getInts(String input){
+        String[] now =  input.split(" ");
+        int[] res = new int[now.length];
+        for (int i = 0; i < now.length; i++) {
+            res[i] = Integer.parseInt(now[i]);
+        }
+        return res;
     }
 
 }

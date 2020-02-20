@@ -9,13 +9,11 @@ public class Ontlener2 {
 
     public EenDataStructuur data;
     public ArrayList<OutputClass>  output;
-    public Set<Integer> set;
 
 
     public Ontlener2(EenDataStructuur input) {
         this.data = input;
         output = new ArrayList<>();
-        set = new HashSet<>();
     }
 
     OutputDataStructuur ontleen(){
@@ -35,7 +33,9 @@ public class Ontlener2 {
         });
         for (Library library : sorted) {
             Arrays.sort(library.catalogus, new intComparator());
-            set.addAll(Arrays.asList(library.catalogus));
+            for (Integer qsdf: library.catalogus) {
+                data.books[qsdf] = -1;
+            }
             output.add(new OutputClass(data.libraries.indexOf(library), library.catalogus));
         }
         return new OutputDataStructuur(output);
@@ -44,9 +44,7 @@ public class Ontlener2 {
 
         @Override
         public int compare(Integer emp1, Integer emp2) {
-            int val1 = data.books[emp1];
-            int val2 = data.books[emp2];
-            return Integer.compare(val1,val2);
+            return Integer.compare( data.books[emp1],data.books[emp2]);
         }
     }
 

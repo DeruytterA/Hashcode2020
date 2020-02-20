@@ -44,7 +44,7 @@ public class Ontlener {
         return lib.singupTime;
     }
 
-    static void shuffleArray(int[] ar)
+    static void shuffleArray(Integer[] ar)
     {
         // If running on Java 6 or older, use `new Random()` on RHS here
         Random rnd = ThreadLocalRandom.current();

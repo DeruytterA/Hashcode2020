@@ -1,11 +1,16 @@
-package hashCode;
+package hashCode.inputData;
+
+import hashCode.AbstractReadWrite;
+import hashCode.EenDataStructuur;
+import hashCode.Library;
+import hashCode.inputData.inputDataStructuur;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class ReadFile<T extends EenDataStructuur> extends AbstractReadWrite<T>{
+public class ReadFile<T extends EenDataStructuur> extends AbstractReadWrite<T> {
 
     public ReadFile(T data, String filename) {
         super(data,in+filename);
@@ -19,16 +24,13 @@ public class ReadFile<T extends EenDataStructuur> extends AbstractReadWrite<T>{
             int[] books = getInts(reader.readLine());
             ArrayList<Library> libraries = new ArrayList<>();
             int[] temp;
-            int max = 0;
             for (int i = 0; i < items[1] ; i++) {
                 temp = getInts(reader.readLine());
-                int[] bookLib = getInts(reader.readLine());
-                if (bookLib.length > max){
-                    max = bookLib.length;
-                }
-                libraries.add(new Library(temp[0],temp[1],temp[2],bookLib,i));
+                libraries.add(new Library(temp[0],temp[1],temp[2],getInts(reader.readLine()),i));
             }
-            data = new OnzeDataStructuur(books,libraries,items[2],max);
+
+            data = new inputDataStructuur(books,libraries,items[2],max);
+
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -1,10 +1,13 @@
-package hashCode;
+package hashCode.outputData;
+
+import hashCode.AbstractReadWrite;
+import hashCode.EenDataStructuur;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class WriteFile<T extends EenDataStructuur> extends AbstractReadWrite<T>{
+public class WriteFile<T extends EenDataStructuur> extends AbstractReadWrite<T> {
 
     public WriteFile(T data, String filename) {
         super(data, out+filename);

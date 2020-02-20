@@ -11,6 +11,7 @@ public class outputDataStructuur extends EenDataStructuur {
 
     public String toString(){
         String string;
+
         return "";
     }
 }

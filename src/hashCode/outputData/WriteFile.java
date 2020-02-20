@@ -7,10 +7,11 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class WriteFile<T extends EenDataStructuur> extends AbstractReadWrite<T> {
+public class WriteFile extends AbstractReadWrite{
 
-    public WriteFile(T data, String filename) {
-        super(data, out+filename);
+    public WriteFile(OutputDataStructuur data, String filename) {
+        super(out+filename);
+        this.data = data;
     }
 
     @Override

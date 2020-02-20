@@ -9,10 +9,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class ReadFile<T extends EenDataStructuur> extends AbstractReadWrite<T> {
+public class ReadFile extends AbstractReadWrite {
 
-    public ReadFile(T data, String filename) {
-        super(data,in+filename);
+    public ReadFile(String filename) {
+        super(in+filename);
     }
 
     @Override
@@ -32,7 +32,6 @@ public class ReadFile<T extends EenDataStructuur> extends AbstractReadWrite<T> {
                 }
                 libraries.add(new Library(temp[0],temp[1],temp[2],ints,i));
             }
-
             data = new InputDataStructuur(books,libraries,items[2],max);
 
         } catch (IOException e) {

@@ -1,5 +1,8 @@
 package hashCode;
 
+import hashCode.outputData.OutputClass;
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Comparator;
 
@@ -22,17 +25,18 @@ public class Ontlener {
 
     }
 
-    public void ontleen() {
+    public ArrayList<OutputClass> ontleen() {
         int currentDay = 0;
         libraries.sort(this::compareLibs);
         for (Library lib : libraries) {
             if (deadline < currentDay) {
-                return;
+                break; // Ik ga niet akkoord met deze Code ~ Arno
             } else {
                 currentDay += signup(lib);
                 pickBooks(lib); // Alle boeken, negeer deadline
             }
         }
+        return maakOutputClasses();
     }
 
     public int signup(Library lib) {
@@ -54,6 +58,15 @@ public class Ontlener {
         double lib1score = maakLibraryScore(lib1);
         double lib2score = maakLibraryScore(lib2);
         return -Double.compare(lib1score, lib2score); // sorted groot naar klein
+    }
+
+    public ArrayList<OutputClass> maakOutputClasses() {
+        ArrayList<OutputClass> gekozenLibs = new ArrayList<>();
+        for (int lib: ontleendVan) {
+            OutputClass opc = new OutputClass(lib, ontleendPerLibrary[lib]);
+            gekozenLibs.add(opc);
+        }
+        return gekozenLibs;
     }
 
 }

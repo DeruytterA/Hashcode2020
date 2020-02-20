@@ -5,9 +5,9 @@ public class OutputClass {
     public int amountBooks;
     public int[] bookIDs;
 
-    public OutputClass(int ID, int amountBooks, int[] bookIDs) {
+    public OutputClass(int ID, int[] bookIDs) {
         this.ID = ID;
-        this.amountBooks = amountBooks;
+        this.amountBooks = bookIDs.length;
         this.bookIDs = bookIDs;
     }
 }

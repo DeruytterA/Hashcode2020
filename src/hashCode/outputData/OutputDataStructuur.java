@@ -10,8 +10,8 @@ public class OutputDataStructuur extends EenDataStructuur {
     public ArrayList<OutputClass> data;
 
     public OutputDataStructuur(ArrayList<OutputClass> data) {
-        this.amountLibraries = data.size();
         this.data = data;
+        this.amountLibraries = data.size();
     }
 
     public String toString(){
@@ -29,8 +29,9 @@ public class OutputDataStructuur extends EenDataStructuur {
     private String toText(OutputClass klasse){
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(klasse.bookIDs[0]);
-        for (int i = 0; i < klasse.bookIDs.; i++) {
-            
+        for (int i = 1; i < klasse.bookIDs.length; i++) {
+            stringBuilder.append(" ").append(klasse.bookIDs[i]);
         }
+        return stringBuilder.toString();
     }
 }

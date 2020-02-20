@@ -17,7 +17,5 @@ public class WriteFile<T extends EenDataStructuur> extends AbstractReadWrite<T>{
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return;
     }
-
 }

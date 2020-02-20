@@ -4,7 +4,8 @@ public abstract class EenDataStructuur {
 
     @Override
     public String toString() {
-        return "EenDataStructuur{}";
+        //todo implementeer dit (Arthur)
+        return "TODO";
     }
 
     //WE SLAAN HIER SHIT OP

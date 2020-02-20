@@ -19,14 +19,14 @@ public class ReadFile extends AbstractReadWrite {
     public void doYourThing() {
         String line;
         try (BufferedReader reader = new BufferedReader(new FileReader(pathname))){
-            int[] items = getInts(reader.readLine());
-            int[] books = getInts(reader.readLine());
+            Integer[] items = getInts(reader.readLine());
+            Integer[] books = getInts(reader.readLine());
             ArrayList<Library> libraries = new ArrayList<>();
-            int[] temp;
+            Integer[] temp;
             int max = 0;
             for (int i = 0; i < items[1] ; i++) {
                 temp = getInts(reader.readLine());
-                int[] ints = getInts(reader.readLine());
+                Integer[] ints = getInts(reader.readLine());
                 if (ints.length > max){
                     max = ints.length;
                 }
@@ -40,9 +40,9 @@ public class ReadFile extends AbstractReadWrite {
         return;
     }
 
-    public int[] getInts(String input){
+    public Integer[] getInts(String input){
         String[] now =  input.split(" ");
-        int[] res = new int[now.length];
+        Integer[] res = new Integer[now.length];
         for (int i = 0; i < now.length; i++) {
             res[i] = Integer.parseInt(now[i]);
         }

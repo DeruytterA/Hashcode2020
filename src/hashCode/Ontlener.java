@@ -9,10 +9,10 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Ontlener {
 
     private ArrayList<Library> libraries;
-    private int[] books; // Hierin staat de score van de boeken
+    private Integer[] books; // Hierin staat de score van de boeken
     private int deadline;
     public ArrayList<Integer> ontleendVan;
-    public int[][] ontleendPerLibrary; // plaats in list is index van library
+    public Integer[][] ontleendPerLibrary; // plaats in list is index van library
     private int maxBoeken;
 
     public Ontlener(EenDataStructuur data) {
@@ -21,7 +21,7 @@ public class Ontlener {
         this.books = data.books;
         this.deadline = data.amountDaysForScanning;
         this.ontleendVan = new ArrayList<>();
-        this.ontleendPerLibrary = new int[libraries.size()][maxBoeken + 1]; // Om op het einde -1 te zetten (zodat we weten dat het gedaan is)
+        this.ontleendPerLibrary = new Integer[libraries.size()][maxBoeken + 1]; // Om op het einde -1 te zetten (zodat we weten dat het gedaan is)
 
     }
 
@@ -44,7 +44,7 @@ public class Ontlener {
         return lib.singupTime;
     }
 
-    static void shuffleArray(int[] ar)
+    static void shuffleArray(Integer[] ar)
     {
         // If running on Java 6 or older, use `new Random()` on RHS here
         Random rnd = ThreadLocalRandom.current();

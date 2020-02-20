@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public abstract class EenDataStructuur {
 
-    public int[] books;
+    public Integer[] books;
     public ArrayList<Library> libraries;
     public int amountDaysForScanning;
     public int maxBoeken;

@@ -7,18 +7,11 @@ import java.util.ArrayList;
 
 public class inputDataStructuur extends EenDataStructuur {
 
-<<<<<<< Updated upstream:src/hashCode/OnzeDataStructuur.java
-    public OnzeDataStructuur(int[] books, ArrayList<Library> libraries, int amountDaysForScanning) {
-=======
-<<<<<<< Updated upstream:src/hashCode/OnzeDataStructuur.java
-    public OnzeDataStructuur(int[] books, ArrayList<Library> libraries, int amountDaysForScanning, int maxBoeken) {
-=======
-    public inputDataStructuur(int[] books, ArrayList<Library> libraries, int amountDaysForScanning) {
->>>>>>> Stashed changes:src/hashCode/inputData/inputDataStructuur.java
->>>>>>> Stashed changes:src/hashCode/inputData/inputDataStructuur.java
+    public inputDataStructuur(int[] books, ArrayList<Library> libraries, int amountDaysForScanning, int maxBoeken) {
         this.books = books;
         this.libraries = libraries;
         this.amountDaysForScanning = amountDaysForScanning;
+        this.maxBoeken = maxBoeken;
     }
 
 }

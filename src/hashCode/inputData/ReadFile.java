@@ -28,17 +28,9 @@ public class ReadFile<T extends EenDataStructuur> extends AbstractReadWrite<T> {
                 temp = getInts(reader.readLine());
                 libraries.add(new Library(temp[0],temp[1],temp[2],getInts(reader.readLine()),i));
             }
-<<<<<<< Updated upstream:src/hashCode/ReadFile.java
-            data = new OnzeDataStructuur(books,libraries,items[2]);
 
-=======
-<<<<<<< Updated upstream:src/hashCode/ReadFile.java
-            data = new OnzeDataStructuur(books,libraries,items[2],max);
-=======
-            data = new inputDataStructuur(books,libraries,items[2]);
+            data = new inputDataStructuur(books,libraries,items[2],max);
 
->>>>>>> Stashed changes:src/hashCode/inputData/ReadFile.java
->>>>>>> Stashed changes:src/hashCode/inputData/ReadFile.java
         } catch (IOException e) {
             e.printStackTrace();
         }

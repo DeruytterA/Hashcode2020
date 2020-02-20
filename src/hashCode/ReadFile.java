@@ -3,6 +3,7 @@ package hashCode;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class ReadFile<T extends EenDataStructuur> extends AbstractReadWrite<T>{
 
@@ -14,10 +15,16 @@ public class ReadFile<T extends EenDataStructuur> extends AbstractReadWrite<T>{
     public void doYourThing() {
         String line;
         try (BufferedReader reader = new BufferedReader(new FileReader(pathname))){
-            line = reader.readLine();
-            int[] items = getInts(line.split(" "));
-            int[items[0]] books;
-            Library[items[1]] libraries;
+            int[] items = getInts(reader.readLine());
+            int[] books = getInts(reader.readLine());
+            ArrayList<Library> libraries = new ArrayList<>();
+            int[] temp;
+            for (int i = 0; i < items[1] ; i++) {
+                temp = getInts(reader.readLine());
+                libraries.add(new Library(temp[0],temp[1],temp[2],getInts(reader.readLine()),i));
+            }
+            data = new OnzeDataStructuur(books,libraries,items[2]);
+
         } catch (IOException e) {
             e.printStackTrace();
         }

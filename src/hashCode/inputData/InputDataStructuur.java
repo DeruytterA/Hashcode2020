@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class InputDataStructuur extends EenDataStructuur {
 
-    public InputDataStructuur(int[] books, ArrayList<Library> libraries, int amountDaysForScanning, int maxBoeken) {
+    public InputDataStructuur(Integer[] books, ArrayList<Library> libraries, int amountDaysForScanning, int maxBoeken) {
         this.books = books;
         this.libraries = libraries;
         this.amountDaysForScanning = amountDaysForScanning;

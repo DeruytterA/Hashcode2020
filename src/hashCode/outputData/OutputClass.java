@@ -6,7 +6,7 @@ public class OutputClass {
     public int amountBooks;
     public Integer[] bookIDs;
 
-    public OutputClass(int ID, int[] bookIDs) {
+    public OutputClass(int ID, Integer[] bookIDs) {
         this.ID = ID;
         this.amountBooks = bookIDs.length;
         this.bookIDs = bookIDs;

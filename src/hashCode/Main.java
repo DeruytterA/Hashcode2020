@@ -14,9 +14,8 @@ public class Main {
         for (String filename: args) {
             ReadFile readFile = new ReadFile(filename);
             readFile.doYourThing();
-            Ontlener ontlener = new Ontlener(readFile.data);
-            OutputDataStructuur outputDataStructuur = new OutputDataStructuur(ontlener.ontleen());
-            WriteFile write = new WriteFile(outputDataStructuur, filename);
+            Ontlener2 ontlener = new Ontlener2(readFile.data);
+            WriteFile write = new WriteFile(ontlener.ontleen(),filename);
             write.doYourThing();
         }
     }

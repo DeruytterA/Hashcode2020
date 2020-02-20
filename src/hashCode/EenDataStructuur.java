@@ -8,5 +8,5 @@ public abstract class EenDataStructuur {
         return "TODO";
     }
 
-    //WE SLAAN HIER SHIT OP
+    //todo WE SLAAN HIER SHIT OP
 }

@@ -24,9 +24,14 @@ public class ReadFile<T extends EenDataStructuur> extends AbstractReadWrite<T> {
             int[] books = getInts(reader.readLine());
             ArrayList<Library> libraries = new ArrayList<>();
             int[] temp;
+            int max = 0;
             for (int i = 0; i < items[1] ; i++) {
                 temp = getInts(reader.readLine());
-                libraries.add(new Library(temp[0],temp[1],temp[2],getInts(reader.readLine()),i));
+                int[] ints = getInts(reader.readLine());
+                if (ints.length > max){
+                    max = ints.length;
+                }
+                libraries.add(new Library(temp[0],temp[1],temp[2],ints,i));
             }
 
             data = new inputDataStructuur(books,libraries,items[2],max);

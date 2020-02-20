@@ -2,9 +2,9 @@ package hashCode;
 
 import hashCode.outputData.OutputClass;
 
+import java.util.*;
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Comparator;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Ontlener {
 
@@ -44,14 +44,38 @@ public class Ontlener {
         return lib.singupTime;
     }
 
+    static void shuffleArray(int[] ar)
+    {
+        // If running on Java 6 or older, use `new Random()` on RHS here
+        Random rnd = ThreadLocalRandom.current();
+        for (int i = ar.length - 1; i > 0; i--)
+        {
+            int index = rnd.nextInt(i + 1);
+            // Simple swap
+            int a = ar[index];
+            ar[index] = ar[i];
+            ar[i] = a;
+        }
+    }
+
+
     public void pickBooks(Library lib) {
-        ontleendPerLibrary[lib.index] = lib.catalogus;
+        shuffleArray(lib.catalogus);
+        ontleendPerLibrary[lib.index] = lib.catalogus ;
     }
 
     public double maakLibraryScore(Library lib) {
         double score;
-        score = ((double) lib.amountBooks * lib.rate * lib.rate) / ((double) lib.singupTime / deadline);  //TODO: sum van catalogussen bijvoegen
+        score = ((double) lib.amountBooks * lib.rate * lib.rate) / ((double) lib.singupTime / deadline) * sumOfBooksInLib(lib);  //TODO: sum van catalogussen bijvoegen
         return score;
+    }
+
+    private int sumOfBooksInLib(Library lib) {
+        int punten = 0;
+        for (int book: lib.catalogus) {
+            punten += books[book];
+        }
+        return punten;
     }
 
     public int compareLibs(Library lib1, Library lib2) {

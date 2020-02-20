@@ -7,6 +7,7 @@ public abstract class EenDataStructuur {
     public int[] books;
     public ArrayList<Library> libraries;
     public int amountDaysForScanning;
+    public int maxBoeken;
 
     @Override
     public String toString() {

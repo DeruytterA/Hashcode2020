@@ -10,6 +10,7 @@ public class Library {
 
     public Library(int amountBooks, int singupTime, int rate, int[] catalogus, int index) {
         this.amountBooks = amountBooks;
+        System.out.println("aantal: " + amountBooks);
         this.singupTime = singupTime;
         this.rate = rate;
         this.catalogus = catalogus;

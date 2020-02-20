@@ -30,7 +30,7 @@ public class Ontlener {
         libraries.sort(this::compareLibs);
         for (Library lib : libraries) {
             if (deadline < currentDay) {
-                break; // Ik ga niet akkoord met deze Code ~ Arno
+                break;
             } else {
                 currentDay += signup(lib);
                 pickBooks(lib); // Alle boeken, negeer deadline
@@ -65,8 +65,9 @@ public class Ontlener {
     }
 
     public double maakLibraryScore(Library lib) {
+        //tis snel genoeg :)
         double score;
-        score = ((double) lib.rate * lib.rate * lib.rate * lib.rate * lib.rate * sumOfBooksInLib(lib) * sumOfBooksInLib(lib)) / (((double) lib.singupTime * lib.singupTime * lib.singupTime * lib.singupTime ) / deadline);  //TODO: sum van catalogussen bijvoegen
+        score = ((double) sumOfBooksInLib(lib) * sumOfBooksInLib(lib) * sumOfBooksInLib(lib) * lib.amountBooks);  //TODO: sum van catalogussen bijvoegen
         return score;
     }
 

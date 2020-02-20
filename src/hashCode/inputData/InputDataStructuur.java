@@ -5,9 +5,9 @@ import hashCode.Library;
 
 import java.util.ArrayList;
 
-public class inputDataStructuur extends EenDataStructuur {
+public class InputDataStructuur extends EenDataStructuur {
 
-    public inputDataStructuur(int[] books, ArrayList<Library> libraries, int amountDaysForScanning, int maxBoeken) {
+    public InputDataStructuur(int[] books, ArrayList<Library> libraries, int amountDaysForScanning, int maxBoeken) {
         this.books = books;
         this.libraries = libraries;
         this.amountDaysForScanning = amountDaysForScanning;

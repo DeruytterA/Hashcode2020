@@ -15,7 +15,9 @@ public class ReadFile<T extends EenDataStructuur> extends AbstractReadWrite<T>{
         String line;
         try (BufferedReader reader = new BufferedReader(new FileReader(pathname))){
             line = reader.readLine();
-
+            int[] items = getInts(line.split(" "));
+            int[items[0]] books;
+            Library[items[1]] libraries;
         } catch (IOException e) {
             e.printStackTrace();
         }

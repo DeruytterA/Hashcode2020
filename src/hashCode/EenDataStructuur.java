@@ -14,5 +14,4 @@ public abstract class EenDataStructuur {
         return "TODO";
     }
 
-    //todo WE SLAAN HIER SHIT OP
 }

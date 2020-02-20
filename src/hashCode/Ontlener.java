@@ -46,7 +46,7 @@ public class Ontlener {
 
     public double maakLibraryScore(Library lib) {
         double score;
-        score = ((double) lib.amountBooks * lib.rate * lib.rate) / ((double) lib.singupTime / deadline);
+        score = ((double) lib.amountBooks * lib.rate * lib.rate) / ((double) lib.singupTime / deadline); //TODO: sum van catalogussen bijvoegen
         return score;
     }
 

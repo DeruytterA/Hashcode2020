@@ -12,9 +12,8 @@ public class WriteFile<T extends EenDataStructuur> extends AbstractReadWrite<T>{
 
     @Override
     public void doYourThing() {
-
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(pathname))){
-            //todo shrijf shit naar data
+            writer.write(data.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }

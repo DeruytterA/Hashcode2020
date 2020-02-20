@@ -18,6 +18,7 @@ public class Ontlener2 {
 
     OutputDataStructuur ontleen(){
         ArrayList<Library> sorted = new ArrayList<>(data.libraries);
+        /*
         sorted.sort((Library library1, Library library2) -> {
             int sum1 = 0;
             int sum2 = 0;
@@ -31,6 +32,7 @@ public class Ontlener2 {
             }
             return Integer.compare(sum1, sum2);
         });
+         */
         for (Library library : sorted) {
             Arrays.sort(library.catalogus, new intComparator());
             for (Integer qsdf: library.catalogus) {

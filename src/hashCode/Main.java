@@ -6,7 +6,7 @@ public class Main {
         for (String filename: args) {
             //todo lees shit (Arthur)
             //todo verwerk shit
-            //todo schrijf shit (Arthur_)
+            //todo schrijf shit (Arthur)
         }
     }
 }

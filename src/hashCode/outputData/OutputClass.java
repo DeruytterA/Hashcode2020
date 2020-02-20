@@ -1,9 +1,10 @@
 package hashCode.outputData;
 
 public class OutputClass {
+
     public int ID;
     public int amountBooks;
-    public int[] bookIDs;
+    public Integer[] bookIDs;
 
     public OutputClass(int ID, int[] bookIDs) {
         this.ID = ID;

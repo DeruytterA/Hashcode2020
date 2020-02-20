@@ -9,8 +9,8 @@ public class OutputDataStructuur extends EenDataStructuur {
     public int amountLibraries;
     public ArrayList<OutputClass> data;
 
-    public OutputDataStructuur(int amountLibraries, ArrayList<OutputClass> data) {
-        this.amountLibraries = amountLibraries;
+    public OutputDataStructuur(ArrayList<OutputClass> data) {
+        this.amountLibraries = data.size();
         this.data = data;
     }
 

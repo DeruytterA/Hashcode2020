@@ -1,8 +1,12 @@
 package hashCode;
 
+import java.util.ArrayList;
+
 public abstract class EenDataStructuur {
 
-    public books 
+    public int[] books;
+    public ArrayList<Library> libraries;
+    public int amountDaysForScanning;
 
     @Override
     public String toString() {
